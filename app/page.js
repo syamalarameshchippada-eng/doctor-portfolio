@@ -12,7 +12,7 @@ export default function PremiumENTHomepage() {
       <nav className="fixed top-0 left-0 w-full z-[999] backdrop-blur-xl bg-white/90 border-b border-[#DCE6F2] shadow-sm">
         <div className="max-w-7xl mx-auto px-8 h-[88px] flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-white shadow-lg">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-lg">
               <img
                 src="/images/logo.png"
                 alt="Clinic Logo"
@@ -164,96 +164,137 @@ export default function PremiumENTHomepage() {
           ))}
         </div>
       </section>
-{/* INFO CARDS */}
-<section className="max-w-7xl mx-auto px-8 pb-24 grid lg:grid-cols-3 gap-8">
-  {[
-    {
-      title: "Academic Foundation",
-      items: [
-        {
-          heading: "Andhra Medical College, Visakhapatnam",
-          description:
-            "Bachelor of Medicine and Surgery (MBBS)",
-        },
-        {
-          heading: "Osmania University, Hyderabad",
-          description:
-            "Postgraduate",
-        },
-      ],
-    },
-    {
-      title: "Clinical Practices",
-      items: [
-        {
-          heading: "Sri Venkateswara Super Speciality E.N.T Care (Mon-Sat)",
-          description:
-            "Prahalada Polyclinic, Beside Somnath Medicals, Near K.G.H, Visakhapatnam.",
-        },
-        {
-          heading: "Sri Venkateswara Polyclinic (Sun)",
-          description:
-            "Near R.T.C Complex, Srungavarapukota.",
-        },
-      ],
-    },
-    {
-      title: "Professional Experience",
-      items: [
-        {
-          heading: "Government E.N.T Hospital, Visakhapatnam",
-          description:
-            "Assistant Professor of E.N.T, Andhra Medical College | 2015 to 2025",
-        },
-        {
-          heading: "Maharaja Government General Hospital",
-          description:
-            "Assistant Professor of E.N.T | 2025 to Present",
-        },
-      ],
-    },
-  ].map((card) => (
-    <div
-      key={card.title}
-      className="bg-white/70 backdrop-blur-xl border border-[#DCE6F2] rounded-[32px] p-10 shadow-lg hover:-translate-y-2 transition duration-300"
-    >
-      <h3 className="text-[30px] font-bold mb-10 leading-tight">
-  {card.title === "Clinical Practices" ? (
-    <>
-      Clinical
-      <br />
-      Practices
-    </>
-  ) : (
-    card.title
-  )}
-</h3>
 
-      <div className="space-y-8">
-        {card.items.map((item) => (
-          <div key={item.heading} className="flex gap-5">
-            <div className="w-4 h-4 rounded-full bg-[#0D5EAF] mt-2" />
+      {/* GALLERY */}
+      <section className="max-w-7xl mx-auto px-8 pb-24">
+        <div className="flex items-end justify-between mb-14">
+          <div>
+            <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-4">
+              Surgical Expertise
+            </p>
 
-            <div>
-              <h4 className="text-[20px] font-semibold leading-8">
-                {item.heading}
-              </h4>
+            <h2 className="text-[52px] leading-[60px] font-bold max-w-[700px]">
+              Precision. Technology. Better Outcomes.
+            </h2>
+          </div>
 
-              <p className="text-[#6B7A90] mt-2 leading-7">
-                {item.description}
-              </p>
+          <button className="hidden md:block border border-[#DCE6F2] bg-white h-14 px-8 rounded-2xl font-semibold hover:bg-[#0D5EAF] hover:text-white transition">
+            View All Procedures
+          </button>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+          {[
+            "/images/surgery1.png",
+            "/images/surgery2.png",
+            "/images/surgery3.png",
+            "/images/surgery4.png",
+            "/images/surgery5.png",
+          ].map((img, index) => (
+            <div
+              key={index}
+              className="overflow-hidden rounded-[24px] group shadow-lg"
+            >
+              <img
+                src={img}
+                alt="Procedure"
+                className="h-[320px] w-full object-cover group-hover:scale-110 transition duration-500"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* INFO CARDS */}
+      <section className="max-w-7xl mx-auto px-8 pb-24 grid lg:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Academic Foundation",
+            items: [
+              {
+                heading: "Andhra Medical College, Visakhapatnam",
+                description:
+                  "Bachelor of Medicine and Surgery (MBBS)",
+              },
+              {
+                heading: "Osmania University, Hyderabad",
+                description: "Postgraduate",
+              },
+            ],
+          },
+          {
+            title: "Clinical Practices",
+            items: [
+              {
+                heading:
+                  "Sri Venkateswara Super Speciality E.N.T Care (Mon-Sat)",
+                description:
+                  "Prahalada Polyclinic, Beside Somnath Medicals, Near K.G.H, Visakhapatnam.",
+              },
+              {
+                heading: "Sri Venkateswara Polyclinic (Sun)",
+                description:
+                  "Near R.T.C Complex, Srungavarapukota.",
+              },
+            ],
+          },
+          {
+            title: "Professional Experience",
+            items: [
+              {
+                heading:
+                  "Government E.N.T Hospital, Visakhapatnam",
+                description:
+                  "Assistant Professor of E.N.T, Andhra Medical College | 2015 to 2025",
+              },
+              {
+                heading:
+                  "Maharaja Government General Hospital",
+                description:
+                  "Assistant Professor of E.N.T | 2025 to Present",
+              },
+            ],
+          },
+        ].map((card) => (
+          <div
+            key={card.title}
+            className="bg-white/70 backdrop-blur-xl border border-[#DCE6F2] rounded-[32px] p-10 shadow-lg hover:-translate-y-2 transition duration-300"
+          >
+            <h3 className="text-[30px] font-bold mb-10 leading-tight">
+              {card.title === "Clinical Practices" ? (
+                <>
+                  Clinical
+                  <br />
+                  Practices
+                </>
+              ) : (
+                card.title
+              )}
+            </h3>
+
+            <div className="space-y-8">
+              {card.items.map((item) => (
+                <div key={item.heading} className="flex gap-5">
+                  <div className="w-4 h-4 rounded-full bg-[#0D5EAF] mt-2" />
+
+                  <div>
+                    <h4 className="text-[20px] font-semibold leading-8">
+                      {item.heading}
+                    </h4>
+
+                    <p className="text-[#6B7A90] mt-2 leading-7">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         ))}
-      </div>
-    </div>
-  ))}
-</section>
+      </section>
+
       {/* CONTACT */}
-      <section
-        id="contact"
-        className="max-w-7xl mx-auto px-8 pb-28"
-      >
+      <section id="contact" className="max-w-7xl mx-auto px-8 pb-28">
         <div className="bg-white rounded-[40px] p-12 lg:p-16 grid lg:grid-cols-2 gap-20 shadow-2xl shadow-blue-100">
           <div>
             <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-4">
@@ -270,10 +311,13 @@ export default function PremiumENTHomepage() {
                   Main Consultation Centre
                 </h3>
 
-                <p className="text-[#6B7A90] text-[17px] leading-8">
+                <a
+                  href="https://www.google.com/maps"
+                  className="text-[#0D5EAF] text-[17px] leading-8"
+                >
                   Sri Venkateswara Super Speciality E.N.T Care,
                   Visakhapatnam, Andhra Pradesh.
-                </p>
+                </a>
               </div>
 
               <div>
@@ -358,12 +402,22 @@ export default function PremiumENTHomepage() {
 
       {/* FOOTER */}
       <footer>
-        <div className="bg-[#0D5EAF] text-white py-8 px-8">
-          <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-10 text-[18px] font-semibold tracking-wide text-center">
-            <span>SURGICAL PRECISION</span>
-            <span>PATIENT CARE</span>
-            <span>CLINICAL EXCELLENCE</span>
-            <span>ADVANCED TECHNOLOGY</span>
+        {/* AUTO CAROUSEL */}
+        <div className="bg-[#0D5EAF] overflow-hidden py-8">
+          <div className="flex marquee-track">
+            <div className="flex items-center gap-20 min-w-max text-white text-[18px] font-semibold tracking-wide px-10">
+              <span>SURGICAL PRECISION</span>
+              <span>PATIENT CARE</span>
+              <span>CLINICAL EXCELLENCE</span>
+              <span>ADVANCED TECHNOLOGY</span>
+            </div>
+
+            <div className="flex items-center gap-20 min-w-max text-white text-[18px] font-semibold tracking-wide px-10">
+              <span>SURGICAL PRECISION</span>
+              <span>PATIENT CARE</span>
+              <span>CLINICAL EXCELLENCE</span>
+              <span>ADVANCED TECHNOLOGY</span>
+            </div>
           </div>
         </div>
 
@@ -434,6 +488,24 @@ export default function PremiumENTHomepage() {
           </div>
         </div>
       </footer>
+
+      {/* MARQUEE ANIMATION */}
+      <style>{`
+  .marquee-track {
+    width: max-content;
+    animation: marquee 18s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+`}</style>
     </div>
   );
-} 
+}
