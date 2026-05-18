@@ -16,6 +16,7 @@ const inter = Inter({
 export const metadata = {
   title: "Dr. Ramesh Kumar Chippada",
   description: "ENT Surgeon Portfolio",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }) {

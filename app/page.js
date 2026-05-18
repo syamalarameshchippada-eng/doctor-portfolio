@@ -52,7 +52,7 @@ export default function PremiumENTHomepage() {
             E.N.T SPECIALIST
           </div>
 
-          <h1 className="text-[72px] leading-[82px] font-bold tracking-[-2px] max-w-[620px]">
+          <h1 className="text-5xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[82px] font-bold tracking-[-2px] max-w-[620px]">
             PRECISION IN SURGICAL EXCELLENCE
           </h1>
 
@@ -97,7 +97,7 @@ export default function PremiumENTHomepage() {
             <img
               src="/images/doctor.png"
               alt="Doctor"
-              className="w-full h-[760px] object-cover"
+              className="w-full max-h-[760px] h-auto object-cover"
             />
           </div>
 
