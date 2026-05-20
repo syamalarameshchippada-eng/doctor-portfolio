@@ -6,6 +6,39 @@ import {
 } from "lucide-react";
 
 export default function PremiumENTHomepage() {
+
+  const doctorSchema = {
+    "@context": "https://schema.org",
+
+    "@type": "Physician",
+
+    name: "Dr. Ramesh Kumar Chippada",
+
+    medicalSpecialty: "ENT",
+
+    image: "https://doctor-portfolio-psi.vercel.app/images/doctor.png",
+
+    url: "https://doctor-portfolio-psi.vercel.app",
+
+    telephone: "+91 8499888518",
+
+    email: "drramesh_ent2007@yahoo.co.in",
+
+    address: {
+      "@type": "Prahlada poly clinic, Opp KGH OP Gate, Jagadamba Junction, Visakhapatnam, Andhra Pradesh 530002",
+
+      addressLocality: "Visakhapatnam",
+
+      addressRegion: "Andhra Pradesh",
+
+      addressCountry: "India",
+    },
+
+    sameAs: [
+      "https://instagram.com/drramesh_entsurgeon"
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#F4F8FC] text-[#0B2341] font-sans pt-[71px] sm:pt-[88px] overflow-x-hidden">
       {/* NAVBAR */}
@@ -21,9 +54,9 @@ export default function PremiumENTHomepage() {
             </div>
 
             <div>
-              <h1 className="text-[15px] sm:text-[18px] lg:text-[20px] font-bold leading-none">
+              <h2 className="text-[15px] sm:text-[18px] lg:text-[20px] font-bold leading-none">
                 Dr. Ramesh Kumar Chippada
-              </h1>
+              </h2>
 
               <p className="text-[13px] text-[#6B7A90] mt-1">
                 E.N.T Surgeon
@@ -36,7 +69,7 @@ export default function PremiumENTHomepage() {
               Home
             </a>
 
-            <a href="#" className="hover:text-[#0D5EAF] transition">
+            <a href="#treatments" className="hover:text-[#0D5EAF] transition">
               About
             </a>
 
@@ -75,9 +108,10 @@ export default function PremiumENTHomepage() {
           </h1>
 
           <p className="mt-6 sm:mt-8 text-[16px] leading-[28px] sm:text-[18px] sm:leading-[32px] text-[#6B7A90] max-w-[560px]">
-            Delivering advanced ENT care through precision surgery,
-            evidence-based treatment, and compassionate patient care
-            supported by modern medical technology.
+            Providing advanced ENT treatment in Visakhapatnam for
+            sinus problems, hearing loss, throat infections, nasal
+            allergies, and ear disorders through modern surgical care
+            and compassionate treatment.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-10">
@@ -173,11 +207,73 @@ export default function PremiumENTHomepage() {
           ))}
         </div>
       </section>
+      <section 
+      id="treatments"
+      className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-28 lg:pb-36">
+  <div className="flex items-end justify-between mb-10">
+    <div>
+      <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-3">
+        ENT Treatments
+      </p>
+
+      <h2 className="text-[32px] sm:text-[44px] font-bold max-w-[700px] leading-tight">
+        Advanced Ear, Nose & Throat Care
+      </h2>
+    </div>
+  </div>
+
+  <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+    {[
+      {
+        title: "Sinus Treatment",
+        desc: "Advanced care for sinus infections, nasal blockage, breathing difficulty, and chronic sinusitis.",
+      },
+
+      {
+        title: "Hearing Problems",
+        desc: "Treatment for hearing loss, tinnitus, ear infections, dizziness, and balance disorders.",
+      },
+
+      {
+        title: "Throat Disorders",
+        desc: "Specialized care for throat pain, tonsillitis, swallowing issues, and voice disorders.",
+      },
+
+      {
+        title: "Ear Surgery",
+        desc: "Modern surgical procedures for chronic ear diseases and hearing restoration treatments.",
+      },
+
+      {
+        title: "Nasal Allergy Care",
+        desc: "Effective management for allergies, sneezing, sinus pressure, and nasal irritation.",
+      },
+
+      {
+        title: "Endoscopic ENT Procedures",
+        desc: "Minimally invasive ENT procedures using advanced endoscopic medical technology.",
+      },
+    ].map((service) => (
+      <div
+        key={service.title}
+        className="bg-white rounded-[24px] p-5 sm:p-6 shadow-md border border-[#E8EEF7] hover:-translate-y-1 transition"
+      >
+        <h3 className="text-[17px] sm:text-[20px] font-semibold leading-7">
+          {service.title}
+        </h3>
+
+        <p className="text-[#6B7A90] text-[14px] sm:text-[15px] mt-3 leading-6">
+          {service.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* GALLERY */}
       <section
         id="expertise" 
-        className="max-w-7xl mx-auto px-8 pb-24">
+        className="scroll-mt-28 max-w-7xl mx-auto px-8 pb-24">
         <div className="flex items-end justify-between mb-14">
           <div>
             <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-4">
@@ -219,7 +315,7 @@ export default function PremiumENTHomepage() {
       {/* INFO CARDS */}
       <section 
       id="experience"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 grid lg:grid-cols-3 gap-8">
+      className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 grid lg:grid-cols-3 gap-8">
         {[
           {
             title: "Academic Foundation",
@@ -309,7 +405,7 @@ export default function PremiumENTHomepage() {
             {/* CONTACT */}
       <section
         id="contact"
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28"
+        className="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28"
       >
         <div className="bg-white rounded-[40px] p-6 sm:p-10 lg:p-16 grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-2xl shadow-blue-100">
           
@@ -554,6 +650,14 @@ export default function PremiumENTHomepage() {
     }
   }
 `}</style>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(doctorSchema),
+  }}
+/>
+
     </div>
   );
 }
