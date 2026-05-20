@@ -53,9 +53,12 @@ export default function PremiumENTHomepage() {
             </a>
           </div>
 
-          <button className="hidden sm:flex items-center justify-center bg-[#0D5EAF] text-white h-12 lg:h-14 px-5 lg:px-7 rounded-2xl text-[14px] lg:text-[15px] font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition">
-            Book Consultation
-          </button>
+          <a
+  href="#contact"
+  className="hidden sm:flex items-center justify-center bg-[#0D5EAF] text-white h-12 lg:h-14 px-5 lg:px-7 rounded-2xl text-[14px] lg:text-[15px] font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition"
+>
+  Book Consultation
+</a>
         </div>
       </nav>
 
@@ -128,6 +131,7 @@ export default function PremiumENTHomepage() {
           <div className="relative overflow-hidden rounded-[48px] bg-[#0D5EAF] shadow-2xl">
             <img
               src="/images/doctor.png"
+              loading="lazy"
               alt="Doctor"
               className="w-full h-[420px] sm:h-[550px] lg:max-h-[760px] object-cover"
             />
@@ -173,7 +177,7 @@ export default function PremiumENTHomepage() {
               Surgical Expertise
             </p>
 
-            <h2 className="text-[52px] leading-[60px] font-bold max-w-[700px]">
+            <h2 className="text-[38px] sm:text-[52px] font-bold max-w-[700px]">
               Precision. Technology. Better Outcomes.
             </h2>
           </div>
@@ -192,7 +196,7 @@ export default function PremiumENTHomepage() {
             "/images/surgery5.png",
           ].map((img, index) => (
             <div
-              key={index}
+              key={img}
               className="overflow-hidden rounded-[24px] group shadow-lg"
             >
               <img
@@ -293,9 +297,14 @@ export default function PremiumENTHomepage() {
         ))}
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28">
+            {/* CONTACT */}
+      <section
+        id="contact"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28"
+      >
         <div className="bg-white rounded-[40px] p-6 sm:p-10 lg:p-16 grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-2xl shadow-blue-100">
+          
+          {/* LEFT SIDE */}
           <div>
             <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-4">
               Get In Touch
@@ -312,7 +321,7 @@ export default function PremiumENTHomepage() {
                 </h3>
 
                 <a
-                  href="https://www.google.com/maps"
+                  href="https://maps.app.goo.gl/pefGEAMGkrHeYkCg9"
                   className="text-[#0D5EAF] text-[17px] leading-8"
                 >
                   Sri Venkateswara Super Speciality E.N.T Care,
@@ -351,9 +360,10 @@ export default function PremiumENTHomepage() {
                   <a
                     href="https://instagram.com/drramesh_entsurgeon"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#0D5EAF] hover:underline"
-                  > Instagram:
-                    @drramesh_entsurgeon
+                  >
+                    Instagram: @drramesh_entsurgeon
                   </a>
                 </p>
               </div>
@@ -361,45 +371,74 @@ export default function PremiumENTHomepage() {
           </div>
 
           {/* FORM */}
-          <div className="bg-[#F8FBFF] border border-[#DCE6F2] rounded-[32px] p-10">
-            <h3 className="text-[34px] font-bold mb-10">
-              Book an Appointment
-            </h3>
+<div className="bg-[#F8FBFF] border border-[#DCE6F2] rounded-[32px] p-10">
+  <h3 className="text-[34px] font-bold mb-10">
+    Book an Appointment
+  </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <input
-                placeholder="First Name"
-                className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none"
-              />
+  <form
+    action="https://formspree.io/f/xdajajer"
+    method="POST"
+  >
+    {/* Hidden Subject */}
+    <input
+      type="hidden"
+      name="_subject"
+      value="New ENT Appointment Request"
+    />
 
-              <input
-                placeholder="Last Name"
-                className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none"
-              />
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-              <input
-                placeholder="Email Address"
-                className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none"
-              />
+      <input
+        type="text"
+        name="firstName"
+        placeholder="First Name"
+        required
+        className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none focus:ring-2 focus:ring-[#0D5EAF]"
+      />
 
-              <input
-                placeholder="Phone Number"
-                className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none"
-              />
-            </div>
+      <input
+        type="text"
+        name="lastName"
+        placeholder="Last Name"
+        required
+        className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none focus:ring-2 focus:ring-[#0D5EAF]"
+      />
 
-            <textarea
-              placeholder="Please describe your concern..."
-              className="w-full mt-6 rounded-2xl border border-[#DCE6F2] px-5 py-4 h-40 outline-none resize-none"
-            />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required
+        className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none focus:ring-2 focus:ring-[#0D5EAF]"
+      />
 
-            <button className="w-full mt-8 bg-[#0D5EAF] text-white h-14 rounded-2xl font-semibold shadow-lg shadow-blue-200 hover:scale-[1.02] transition">
-              Submit Medical Inquiry
-            </button>
-          </div>
-        </div>
-      </section>
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        required
+        className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none focus:ring-2 focus:ring-[#0D5EAF]"
+      />
+    </div>
 
+    <textarea
+      name="message"
+      placeholder="Please describe your concern..."
+      required
+      className="w-full mt-6 rounded-2xl border border-[#DCE6F2] px-5 py-4 h-40 outline-none resize-none focus:ring-2 focus:ring-[#0D5EAF]"
+    />
+
+    <button
+      type="submit"
+      className="w-full mt-8 bg-[#0D5EAF] text-white h-14 rounded-2xl font-semibold shadow-lg shadow-blue-200 hover:scale-[1.02] transition"
+    >
+      Submit Medical Inquiry
+    </button>
+  </form>
+</div>
+</div>
+</section>
       {/* FOOTER */}
       <footer>
         {/* AUTO CAROUSEL */}
