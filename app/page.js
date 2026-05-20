@@ -194,7 +194,7 @@ export default function PremiumENTHomepage() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {[
             "/images/surgery1.png",
             "/images/surgery2.png",
@@ -209,7 +209,7 @@ export default function PremiumENTHomepage() {
               <img
                 src={img}
                 alt="Procedure"
-                className="h-[260px] sm:h-[320px] w-full object-cover group-hover:scale-110 transition duration-500"
+                className="h-[180px] sm:h-[260px] lg:h-[320px] w-full object-cover group-hover:scale-110 transition duration-500"
               />
             </div>
           ))}
