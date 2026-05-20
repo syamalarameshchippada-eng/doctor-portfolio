@@ -7,12 +7,12 @@ import {
 
 export default function PremiumENTHomepage() {
   return (
-    <div className="min-h-screen bg-[#F4F8FC] text-[#0B2341] font-sans pt-[88px]">
+    <div className="min-h-screen bg-[#F4F8FC] text-[#0B2341] font-sans pt-[71px] sm:pt-[88px] overflow-x-hidden">
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full z-[999] backdrop-blur-xl bg-white/90 border-b border-[#DCE6F2] shadow-sm">
-        <div className="max-w-7xl mx-auto px-8 h-[88px] flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] sm:h-[88px] flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-lg">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden border-2 border-white shadow-lg">
               <img
                 src="/images/logo.png"
                 alt="Clinic Logo"
@@ -21,7 +21,7 @@ export default function PremiumENTHomepage() {
             </div>
 
             <div>
-              <h1 className="text-[20px] font-bold leading-none">
+              <h1 className="text-[15px] sm:text-[18px] lg:text-[20px] font-bold leading-none">
                 Dr. Ramesh Kumar Chippada
               </h1>
 
@@ -53,14 +53,14 @@ export default function PremiumENTHomepage() {
             </a>
           </div>
 
-          <button className="bg-[#0D5EAF] text-white h-14 px-7 rounded-2xl text-[15px] font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition">
+          <button className="hidden sm:flex items-center justify-center bg-[#0D5EAF] text-white h-12 lg:h-14 px-5 lg:px-7 rounded-2xl text-[14px] lg:text-[15px] font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition">
             Book Consultation
           </button>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-8 pt-28 pb-24 grid lg:grid-cols-2 gap-20 items-center">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-20 lg:pt-28 pb-16 lg:pb-24 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         {/* LEFT */}
         <div>
           <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-full px-4 py-2 text-[#0D5EAF] text-sm font-semibold mb-8">
@@ -68,17 +68,17 @@ export default function PremiumENTHomepage() {
             E.N.T SPECIALIST
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-[72px] leading-tight lg:leading-[82px] font-bold tracking-[-2px] max-w-[620px]">
+          <h1 className="text-[40px] leading-[48px] sm:text-5xl sm:leading-[60px] lg:text-[72px] lg:leading-[82px] font-bold tracking-[-2px] max-w-[620px]">
             PRECISION IN SURGICAL EXCELLENCE
           </h1>
 
-          <p className="mt-8 text-[18px] leading-[32px] text-[#6B7A90] max-w-[560px]">
+          <p className="mt-6 sm:mt-8 text-[16px] leading-[28px] sm:text-[18px] sm:leading-[32px] text-[#6B7A90] max-w-[560px]">
             Delivering advanced ENT care through precision surgery,
             evidence-based treatment, and compassionate patient care
             supported by modern medical technology.
           </p>
 
-          <div className="flex flex-wrap gap-5 mt-10">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-10">
             <button className="bg-[#0D5EAF] text-white h-14 px-8 rounded-2xl font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition">
               Schedule Consultation
             </button>
@@ -89,7 +89,7 @@ export default function PremiumENTHomepage() {
           </div>
 
           {/* FEATURE BOXES */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-14 lg:mt-16">
             {[
               {
                 title: "Advanced Technology",
@@ -129,11 +129,11 @@ export default function PremiumENTHomepage() {
             <img
               src="/images/doctor.png"
               alt="Doctor"
-              className="w-full max-h-[760px] h-auto object-cover"
+              className="w-full h-[420px] sm:h-[550px] lg:max-h-[760px] object-cover"
             />
           </div>
 
-          <div className="absolute bottom-8 right-8 bg-white rounded-3xl shadow-xl p-6 w-[220px]">
+          <div className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 bg-white rounded-3xl shadow-xl p-4 sm:p-6 w-[170px] sm:w-[220px]">
             <h3 className="text-[42px] font-bold text-[#0D5EAF] leading-none">
               15+
             </h3>
@@ -147,7 +147,7 @@ export default function PremiumENTHomepage() {
 
       {/* STATS */}
       <section className="max-w-7xl mx-auto px-8 pb-24">
-        <div className="bg-white rounded-[32px] p-10 shadow-xl shadow-blue-100 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="bg-white rounded-[32px] p-6 sm:p-10 shadow-xl shadow-blue-100 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {[
             ["15+", "Years Experience"],
             ["5000+", "Happy Patients"],
@@ -155,7 +155,7 @@ export default function PremiumENTHomepage() {
             ["2", "Clinic Locations"],
           ].map(([number, label]) => (
             <div key={label} className="text-center lg:text-left">
-              <h2 className="text-[42px] font-bold text-[#0D5EAF]">
+              <h2 className="text-[30px] sm:text-[42px] font-bold text-[#0D5EAF]">
                 {number}
               </h2>
 
@@ -183,7 +183,7 @@ export default function PremiumENTHomepage() {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {[
             "/images/surgery1.png",
             "/images/surgery2.png",
@@ -198,7 +198,7 @@ export default function PremiumENTHomepage() {
               <img
                 src={img}
                 alt="Procedure"
-                className="h-[320px] w-full object-cover group-hover:scale-110 transition duration-500"
+                className="h-[260px] sm:h-[320px] w-full object-cover group-hover:scale-110 transition duration-500"
               />
             </div>
           ))}
@@ -206,7 +206,7 @@ export default function PremiumENTHomepage() {
       </section>
 
       {/* INFO CARDS */}
-      <section className="max-w-7xl mx-auto px-8 pb-24 grid lg:grid-cols-3 gap-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 grid lg:grid-cols-3 gap-8">
         {[
           {
             title: "Academic Foundation",
@@ -217,8 +217,8 @@ export default function PremiumENTHomepage() {
                   "Bachelor of Medicine and Surgery (MBBS)",
               },
               {
-                heading: "Osmania University, Hyderabad",
-                description: "Postgraduate",
+                heading: "Osmania Medical College, Govt. E.N.T Hospital, Koti, Hyderabad",
+                description: "Postgraduate MS(E.N.T), DLO",
               },
             ],
           },
@@ -258,7 +258,7 @@ export default function PremiumENTHomepage() {
         ].map((card) => (
           <div
             key={card.title}
-            className="bg-white/70 backdrop-blur-xl border border-[#DCE6F2] rounded-[32px] p-10 shadow-lg hover:-translate-y-2 transition duration-300"
+            className="bg-white/70 backdrop-blur-xl border border-[#DCE6F2] rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-lg hover:-translate-y-2 transition duration-300"
           >
             <h3 className="text-[30px] font-bold mb-10 leading-tight">
               {card.title === "Clinical Practices" ? (
@@ -294,14 +294,14 @@ export default function PremiumENTHomepage() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="max-w-7xl mx-auto px-8 pb-28">
-        <div className="bg-white rounded-[40px] p-12 lg:p-16 grid lg:grid-cols-2 gap-20 shadow-2xl shadow-blue-100">
+      <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 lg:pb-28">
+        <div className="bg-white rounded-[40px] p-6 sm:p-10 lg:p-16 grid lg:grid-cols-2 gap-12 lg:gap-20 shadow-2xl shadow-blue-100">
           <div>
             <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-4">
               Get In Touch
             </p>
 
-            <h2 className="text-[54px] leading-[62px] font-bold max-w-[500px]">
+            <h2 className="text-[38px] leading-[46px] sm:text-[48px] sm:leading-[56px] lg:text-[54px] lg:leading-[62px] font-bold max-w-[500px]">
               Inquiries & Clinical Consultations
             </h2>
 
@@ -343,7 +343,7 @@ export default function PremiumENTHomepage() {
                     href="mailto:drramesh_ent2007@yahoo.co.in"
                     className="text-[#0D5EAF] hover:underline"
                   >
-                    drramesh_ent2007@yahoo.co.in
+                    Email: drramesh_ent2007@yahoo.co.in
                   </a>
 
                   <br />
@@ -352,7 +352,7 @@ export default function PremiumENTHomepage() {
                     href="https://instagram.com/drramesh_entsurgeon"
                     target="_blank"
                     className="text-[#0D5EAF] hover:underline"
-                  >
+                  > Instagram:
                     @drramesh_entsurgeon
                   </a>
                 </p>
@@ -366,7 +366,7 @@ export default function PremiumENTHomepage() {
               Book an Appointment
             </h3>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <input
                 placeholder="First Name"
                 className="h-14 rounded-2xl border border-[#DCE6F2] px-5 outline-none"
@@ -422,7 +422,7 @@ export default function PremiumENTHomepage() {
         </div>
 
         <div className="bg-white py-10 px-8 border-t border-[#DCE6F2]">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 text-center lg:text-left">
             <div>
               <h3 className="text-[22px] font-bold">
                 Dr. Ramesh Kumar Chippada
