@@ -97,7 +97,15 @@ export const metadata = {
 
     images: ["/images/doctor.png"],
   },
+verification: {
+  google: "ilVlOgpEJdgsXsaXU8PF10JFf4JuAVyFBUzXhxSE4rI",
+},
 
+formatDetection: {
+  email: false,
+  address: false,
+  telephone: false,
+},
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
