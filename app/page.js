@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Script from "next/script";
+
 import {
   Stethoscope,
   ShieldCheck,
@@ -25,14 +28,19 @@ export default function PremiumENTHomepage() {
     email: "drramesh_ent2007@yahoo.co.in",
 
     address: {
-      "@type": "Prahlada poly clinic, Opp KGH OP Gate, Jagadamba Junction, Visakhapatnam, Andhra Pradesh 530002",
+  "@type": "PostalAddress",
 
-      addressLocality: "Visakhapatnam",
+  streetAddress:
+    "Prahlada Polyclinic, Opp KGH OP Gate, Jagadamba Junction",
 
-      addressRegion: "Andhra Pradesh",
+  addressLocality: "Visakhapatnam",
 
-      addressCountry: "India",
-    },
+  addressRegion: "Andhra Pradesh",
+
+  postalCode: "530002",
+
+  addressCountry: "India",
+},
 
     sameAs: [
       "https://instagram.com/drramesh_entsurgeon"
@@ -46,17 +54,19 @@ export default function PremiumENTHomepage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] sm:h-[88px] flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden border-2 border-white shadow-lg">
-              <img
+              <Image
                 src="/images/logo.png"
-                alt="Clinic Logo"
+                alt="Dr Ramesh Kumar Chippada ENT Clinic Logo"
+                width={80}
+                height={80}
                 className="w-full h-full object-cover"
               />
             </div>
 
             <div>
-              <h2 className="text-[15px] sm:text-[18px] lg:text-[20px] font-bold leading-none">
+              <p className="text-[15px] sm:text-[18px] lg:text-[20px] font-bold leading-none">
                 Dr. Ramesh Kumar Chippada
-              </h2>
+              </p>
 
               <p className="text-[13px] text-[#6B7A90] mt-1">
                 E.N.T Surgeon
@@ -123,7 +133,7 @@ export default function PremiumENTHomepage() {
             </a>
 
             <a
-              href="#services"
+              href="#treatments"
               className="flex items-center justify-center border border-[#DCE6F2] bg-white h-14 px-8 rounded-2xl font-semibold hover:bg-[#0D5EAF] hover:text-white transition"
             >
               View Services
@@ -168,10 +178,12 @@ export default function PremiumENTHomepage() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#0D5EAF] to-blue-400 rounded-[48px] rotate-3"></div>
 
           <div className="relative overflow-hidden rounded-[48px] bg-[#0D5EAF] shadow-2xl">
-            <img
+            <Image
               src="/images/doctor.png"
-              loading="lazy"
-              alt="Ramesh Kumar Chippada"
+              alt="Dr Ramesh Kumar Chippada ENT Specialist in Visakhapatnam"
+              width={900}
+              height={1200}
+              priority
               className="w-full h-[420px] sm:h-[550px] lg:max-h-[760px] object-cover"
             />
           </div>
@@ -302,9 +314,11 @@ export default function PremiumENTHomepage() {
               key={img}
               className="overflow-hidden rounded-[24px] group shadow-lg"
             >
-              <img
+              <Image
                 src={img}
-                alt="Procedure"
+                alt="Advanced ENT Surgery Procedure"
+                width={500}
+                height={700}
                 className="h-[180px] sm:h-[260px] lg:h-[320px] w-full object-cover group-hover:scale-110 transition duration-500"
               />
             </div>
@@ -338,7 +352,7 @@ export default function PremiumENTHomepage() {
                 heading:
                   "Sri Venkateswara Super Speciality E.N.T Care (Mon-Sat)",
                 description:
-                  "Prahalada Polyclinic, Beside Somnath Medicals, Near K.G.H, Visakhapatnam.",
+                  "Prahlada Polyclinic, Beside Somnath Medicals, Near K.G.H, Visakhapatnam.",
               },
               {
                 heading: "Sri Venkateswara Polyclinic (Sun)",
@@ -586,9 +600,11 @@ export default function PremiumENTHomepage() {
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-[#F4F8FC] flex items-center justify-center hover:bg-[#E8F1FB] transition overflow-hidden"
               >
-                <img
+                <Image
                   src="/images/instagram.png"
                   alt="Instagram"
+                  width={24}
+                  height={24}
                   className="w-6 h-6 object-contain"
                 />
               </a>
@@ -598,9 +614,11 @@ export default function PremiumENTHomepage() {
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-[#F4F8FC] flex items-center justify-center hover:bg-[#E8F1FB] transition overflow-hidden"
               >
-                <img
+                <Image
                   src="/images/facebook.png"
                   alt="Facebook"
+                  width={24}
+                  height={24}
                   className="w-6 h-6 object-contain"
                 />
               </a>
@@ -610,9 +628,11 @@ export default function PremiumENTHomepage() {
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-[#F4F8FC] flex items-center justify-center hover:bg-[#E8F1FB] transition overflow-hidden"
               >
-                <img
+                <Image
                   src="/images/linkedin.png"
                   alt="LinkedIn"
+                  width={24}
+                  height={24}
                   className="w-6 h-6 object-contain"
                 />
               </a>
@@ -622,9 +642,11 @@ export default function PremiumENTHomepage() {
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-[#F4F8FC] flex items-center justify-center hover:bg-[#E8F1FB] transition overflow-hidden"
               >
-                <img
+                <Image
                   src="/images/x.png"
                   alt="X"
+                  width={24}
+                  height={24}
                   className="w-6 h-6 object-contain"
                 />
               </a>
@@ -651,7 +673,8 @@ export default function PremiumENTHomepage() {
   }
 `}</style>
 
-<script
+<Script
+  id="doctor-schema"
   type="application/ld+json"
   dangerouslySetInnerHTML={{
     __html: JSON.stringify(doctorSchema),
