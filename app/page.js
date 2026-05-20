@@ -40,11 +40,11 @@ export default function PremiumENTHomepage() {
               About
             </a>
 
-            <a href="#" className="hover:text-[#0D5EAF] transition">
+            <a href="#expertise" className="hover:text-[#0D5EAF] transition">
               Expertise
             </a>
 
-            <a href="#" className="hover:text-[#0D5EAF] transition">
+            <a href="#experience" className="hover:text-[#0D5EAF] transition">
               Experience
             </a>
 
@@ -54,11 +54,10 @@ export default function PremiumENTHomepage() {
           </div>
 
           <a
-  href="#contact"
-  className="hidden sm:flex items-center justify-center bg-[#0D5EAF] text-white h-12 lg:h-14 px-5 lg:px-7 rounded-2xl text-[14px] lg:text-[15px] font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition"
->
-  Book Consultation
-</a>
+          href="#contact" className="flex items-center justify-center bg-[#0D5EAF] text-white h-12 lg:h-14 px-5 lg:px-7 rounded-2xl text-[14px] lg:text-[15px] font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition"
+          >
+            Book Consultation
+            </a>
         </div>
       </nav>
 
@@ -82,13 +81,19 @@ export default function PremiumENTHomepage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-10">
-            <button className="bg-[#0D5EAF] text-white h-14 px-8 rounded-2xl font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition">
+            <a
+              href="#contact"
+              className="flex items-center justify-center bg-[#0D5EAF] text-white h-14 px-8 rounded-2xl font-semibold shadow-lg shadow-blue-200 hover:scale-105 transition"
+            >
               Schedule Consultation
-            </button>
+            </a>
 
-            <button className="border border-[#DCE6F2] bg-white h-14 px-8 rounded-2xl font-semibold hover:bg-[#0D5EAF] hover:text-white transition">
+            <a
+              href="#services"
+              className="flex items-center justify-center border border-[#DCE6F2] bg-white h-14 px-8 rounded-2xl font-semibold hover:bg-[#0D5EAF] hover:text-white transition"
+            >
               View Services
-            </button>
+            </a>
           </div>
 
           {/* FEATURE BOXES */}
@@ -132,7 +137,7 @@ export default function PremiumENTHomepage() {
             <img
               src="/images/doctor.png"
               loading="lazy"
-              alt="Doctor"
+              alt="Ramesh Kumar Chippada"
               className="w-full h-[420px] sm:h-[550px] lg:max-h-[760px] object-cover"
             />
           </div>
@@ -170,7 +175,9 @@ export default function PremiumENTHomepage() {
       </section>
 
       {/* GALLERY */}
-      <section className="max-w-7xl mx-auto px-8 pb-24">
+      <section
+        id="expertise" 
+        className="max-w-7xl mx-auto px-8 pb-24">
         <div className="flex items-end justify-between mb-14">
           <div>
             <p className="text-sm font-semibold tracking-[1px] text-[#0D5EAF] uppercase mb-4">
@@ -210,7 +217,9 @@ export default function PremiumENTHomepage() {
       </section>
 
       {/* INFO CARDS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 grid lg:grid-cols-3 gap-8">
+      <section 
+      id="experience"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 grid lg:grid-cols-3 gap-8">
         {[
           {
             title: "Academic Foundation",
